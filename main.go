@@ -1,11 +1,15 @@
 package main
 
-import "net/http"
+import (
+    "fmt"
+    "net/http"
+)
 
 func main() {
     http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-        w.Write([]byte("Hello Vaishnavi !!!"))
+        fmt.Fprintln(w, "Hello Vaishnavi !!!")
     })
 
-    http.ListenAndServe(":8080", nil) // HTTP, NOT HTTPS
+    fmt.Println("Starting server on port 8080...")
+    http.ListenAndServe(":8080", nil)
 }
