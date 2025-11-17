@@ -1,3 +1,3 @@
-module github.com/Vaishnavikathar/hello-vaishnavi
+module go-lang
 
 go 1.22
